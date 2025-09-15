@@ -21,53 +21,71 @@ html, body {
     overflow: hidden
 }
 
+@keyframes rotateimg {
+   from {transform: rotate(0deg);}
+    to {transform: rotate(360deg);}
+}
 main {
+    scale: 0.5;
+}
+
+#mainstuff {
     width: 100vw;
     height: 100vh;
     display: flex;
-    flex-direction: column;
     align-items: center;
     justify-content: center;
-    h1 {
+
+    text {
         font-family: 'Sligoil', serif;
-        text-align: center;
-        margin-bottom: 1rem;
+        font-size: 6rem;
+    }
+
+    svg {
+        z-index: 10;
+        width: 1000px;
+        height: 1000px;
+        position: absolute;
+        padding: 100px;
+    }
+
+    #imageMe {
+        animation-name: rotateimg;
+        animation-duration: 120s;
+        position: absolute;
     }
     #imageMe img{
-        width: 50vw;
+        width: 900px;
         border-radius: 50%;
         box-shadow: 0 0 0 0 var(--purple);
-        transition: 0.1s ease-in-out;
     }
 
-    #imageMe img:hover{
-        box-shadow: 0 0 0 10px var(--purple);
-    }
-
-    #links {
-        display: flex;
-        flex-direction: row;
-        margin-top: 1rem;
+    .link {
+        position: fixed;
+        z-index: 20;
         .logo {
-            height: 3rem;
-            margin: 0.5rem;
+            display: block;
+            height: 90px;
+            transform: translateY(550px);
             img {
                 height: 100%;
             }
         }
-
-        .logo:hover {
-            scale: 1.1;
-            transition: 0.05s ease-in-out;
-        }
+    }
+    .link:first-of-type {
+        transform: rotate(10deg);
+    }
+    .link:nth-of-type(2) {
+        transform: rotate(-3deg);
+    }
+    .link:nth-of-type(3) {
+        transform: rotate(-16deg);
+    }
+    .link:nth-of-type(4) {
+        transform: rotate(-29deg);
     }
 }
 
 @media screen and (min-width: 1025px) {
-    main {
-        #imageMe img{
-            width: 30vw;
-            border-radius: 50%;
-        }
-    }
+
 }
