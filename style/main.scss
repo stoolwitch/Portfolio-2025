@@ -1,3 +1,20 @@
+:root {
+    --yellow: #FFFBBE;
+    --aboutme: #FFFEF2;
+    --pink: #FFC2FF;
+    --highlights: #FFF2FF;
+    --turquoise: #B5FFFC;
+    --playground: #EDFFFE;
+    --purple: #ddc2ff;
+    --posters: #f2e8ff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    scrollbar-width: none;
+}
+
 html, body {
     margin: 0;
     height: 100%;
@@ -14,11 +31,19 @@ main {
     h1 {
         font-family: 'Sligoil', serif;
         text-align: center;
+        margin-bottom: 1rem;
     }
     #imageMe img{
         width: 50vw;
         border-radius: 50%;
+        box-shadow: 0 0 0 0 var(--purple);
+        transition: 0.1s ease-in-out;
     }
+
+    #imageMe img:hover{
+        box-shadow: 0 0 0 10px var(--purple);
+    }
+
     #links {
         display: flex;
         flex-direction: row;
@@ -29,6 +54,11 @@ main {
             img {
                 height: 100%;
             }
+        }
+
+        .logo:hover {
+            scale: 1.1;
+            transition: 0.05s ease-in-out;
         }
     }
 }
