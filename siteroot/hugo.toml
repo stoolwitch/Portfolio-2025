@@ -1,0 +1,28 @@
+baseURL = 'https://nyxviolet.com'
+languageCode = 'en-us'
+title = 'Nyx Schütz'
+
+theme = "dream"
+
+enableRobotsTXT = true
+
+[params]
+author = "nyx"
+avatar = "img/portrait-emma-fantoche.jpg"
+headerTitle = "hi! i'm nyx"
+motto = "welcome to my portfolio"
+
+rss = false
+
+email = "info@nyxviolet.com"
+
+siteStartYear = 2025
+
+stickyNav = true
+imageZoomableInPost = true
+
+lightTheme = "emerald"
+darkTheme = "forest"
+
+[params.advanced]
+customCSS = ["css/custom.css"]

@@ -1,0 +1,6 @@
+socials = [
+    { href = "https://www.instagram.com/nyx_amere_/", target="_blank", icon = "logo-instagram", title = "Instagram" },
+    { href = "https://www.linkedin.com/in/nyx-violet-schutz/", target="_blank", icon = "logo-linkedin", title = "Linkedin" },
+#    { href = "https://stoolwitch.itch.io/", target="_blank", icon = "logo-linkedin", title = "itch" },
+#    { href = "mailto:info@nyxviolet.com", target="_blank", icon = "at-outline", title = "email" },
+]
