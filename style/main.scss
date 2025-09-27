@@ -15,79 +15,110 @@
     scrollbar-width: none;
 }
 
-html, body {
+html,
+body {
     margin: 0;
     height: 100%;
     overflow: hidden
 }
 
 @keyframes rotateimg {
-   from {transform: rotate(0deg);}
-    to {transform: rotate(360deg);}
-}
-main {
-    scale: 0.5;
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
 }
 
-#mainstuff {
+main {
     width: 100vw;
     height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
 
-    text {
-        font-family: 'Sligoil', serif;
-        font-size: 6rem;
-    }
+    #mainstuff {
+        width: 100vw;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        #curvedText {
+            width: 115%;
+            z-index: -10;
+            position: fixed;
+        }
 
-    svg {
-        z-index: 10;
-        width: 1000px;
-        height: 1000px;
-        position: absolute;
-        padding: 1000px;
-    }
+        #imageMe {
+            z-index: 10;
+            position: fixed;
+            animation: rotateimg 120s linear infinite;
+        }
 
-    #imageMe {
-        animation-name: rotateimg;
-        animation-duration: 120s;
-        position: absolute;
-    }
-    #imageMe img{
-        width: 900px;
-        border-radius: 50%;
-        box-shadow: 0 0 0 0 var(--purple);
-    }
+        #imageMe img {
+            width: 80vw;
+            border-radius: 50%;
+            box-shadow: 0 0 0 0 var(--purple);
+        }
 
-    .link {
-        position: fixed;
-        z-index: 20;
-        .logo {
-            display: block;
-            height: 90px;
-            transform: translateY(550px);
-            img {
-                height: 100%;
+        .link {
+            z-index: 20;
+            position: fixed;
+            .logo {
+                display: block;
+                height: 3rem;
+                transform: translateY(48vw);
+                img {
+                    height: 100%;
+                }
             }
         }
-    }
-    .link:first-of-type {
-        transform: rotate(10deg);
-    }
-    .link:nth-of-type(2) {
-        transform: rotate(-3deg);
-    }
-    .link:nth-of-type(3) {
-        transform: rotate(-16deg);
-    }
-    .link:nth-of-type(4) {
-        transform: rotate(-29deg);
+
+        .link:first-of-type {
+            transform: rotate(10deg);
+        }
+
+        .link:nth-of-type(2) {
+            transform: rotate(-3deg);
+        }
+
+        .link:nth-of-type(3) {
+            transform: rotate(-16deg);
+        }
+
+        .link:nth-of-type(4) {
+            transform: rotate(-29deg);
+        }
+
     }
 }
 
-@media screen and (max-width: 500px) {
-main {
-    scale: 0.3;
+@media screen and (min-width: 740px) {
+    main {
+    #mainstuff {
+        width: auto;
+        height: 100vh;
+        #curvedText {
+            width: auto;
+            height: 100%;
+        }
+
+        #imageMe img {
+            width: auto;
+            height: 70vh;
+        }
+
+        .link {
+            .logo {
+                display: block;
+                transform: translateY(42vh);
+                img {
+                    height: 100%;
+                }
+            }
+        }
+
+    }
 }
 }
