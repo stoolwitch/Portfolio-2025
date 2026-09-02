@@ -7,36 +7,80 @@
     <title>Nyx Schütz</title>
     <link rel="stylesheet" href="style/fonts.css">
     <link rel="stylesheet" href="style/main.css">
+    <script src="script/time.js"></script>
 </head>
 
 <body>
-    <main>
-        <div id="mainstuff">
-            <img id="curvedText" src="media/misc/hi.svg" alt="curved text that says hi i'm nyx">
-            <picture id="imageMe">
-                <source srcset="media/me/portrait-250919.avif" type="image/avif">
-                <source srcset="media/me/portrait-250919.webp" type=" image/webp">
-                <img src="media/me/portrait-250919.jpg" alt="a picture of me! with a mom vibe i've been told (in a good way)">
-            </picture>
-            <div class="link">
-                <a class="logo" href="https://www.instagram.com/nyxschutz/" target="_blank"><img
-                        src="media/logos/instagram.svg" alt="instagram"></a>
-            </div>
-            <div class="link">
-                <a class="logo" href="https://www.linkedin.com/in/nyx-violet-schutz/" target="_blank"><img
-                        src="media/logos/linkedin.svg" alt="linkedin"></a>
-            </div>
-            <div class="link">
-                <a class="logo" href="https://stoolwitch.itch.io" target="_blank"><img src="media/logos/itchio.svg"
-                        alt="itch"></a>
-            </div>
-            <div class="link">
-                <a class="logo" href="mailto:info@nyxviolet.com" target="_blank"><img src="media/logos/mail.svg"
-                        alt="email"></a>
-            </div>
+    <section id="scenario">
+        <h1>INT. BUREAU — <span class="time"></span></h1>
+        <p>Vous êtes en train de lire le contenu du site de Nyx Schütz. Vous allez découvrir qui elle est et ce qu’elle fait.</p>
+        <h2>NYX</h2>
+        <p class="dialogue">Je suis une professionnelle du cinéma et de la culture en Suisse. Ma spécialité c’est la communication mais je ne m’y restreint pas.</p>
+        <p>Nyx travaille actuellement dans plusieurs cinémas lausannois et s’occupe de la communication du Festival Cinéma Jeune Public. Vous trouverez un lien vers sa page Linkedin en bas de la page. Elle a une formation d’Interactive Media Designer, ce qui veut dire qu’elle est une spécialiste de la communication visuelle et qu’elle a des connaissances techniques en graphisme, photographie, vidéo, web et autres. Elle comprend le jargon de tout le monde.</p>
+        <h2>NYX (CONT'D)</h2>
+        <p class="dialogue">J’écris actuellement un court-métrage de body-horror et je vais bientôt le pitcher à plusieurs producteur·ices.</p>
+        <p>Son projet a été sélectionné en 2026 par <i>La salle de sport</i>, un programme d’aide à l’écriture basé à Genève. On croise les doigts pour que son film soit produit!</p>
+        <h2>NYX (CONT'D)</h2>
+        <p class="dialogue">Je cherche actuellement un CDI à maximum 80% dans la culture pour avoir une stabilité et avoir du temps pour continuer à écrire. Et jouer au foot.</p>
+        <p>On dit de Nyx qu’elle a un tempérament « égal et agréable », qu’elle a une « excellent capacité d’analyse et de synthèse » et qu’elle est une perle. Ces employeur·euses ont effectivement à plusieurs reprises contacté Nyx pour faire des petites missions.</p>
+        <h2>NYX (CONT'D)</h2>
+        <p class="dialogue">Et aller à la boxe.</p>
+        <p>Si vous êtes intéressé·xe par son travail ou vous voulez lui parler d’une offre, vous pouvez lui envoyer un courriel via le lien en pied de page.</p>
+        <h2>NYX (CONT'D)</h2>
+        <p class="dialogue">Et jouer à Donjons et Dragons. Et faire des Gamejams.</p>
+        <p>Nyx a effectivement beaucoup de hobbies, des fois elle poste des photos sur les réseaux.</p>
+        <h2>NYX (CONT'D)</h2>
+        <p class="dialogue">Et vous pouvez trouver mes jeux sur la page itch.io de Donut Jam Studios!</p>
+        <p>Également en pied de page.</p>
+        <h2>NYX (CONT'D)</h2>
+        <p class="dialogue">À bientôt!</p>
+        <p> <a href="mailto:info@nyxviolet.com">À vous d’écrire la suite.</a></p>
+    </section>
+    <section id="links">
+        <div class="link">
+            <a class="logo" href="mailto:info@nyxviolet.com" target="_blank"><img src="media/logos/mail.svg" alt="email"></a>
         </div>
+        <div class="link">
+            <a class="logo" href="https://www.linkedin.com/in/nyx-violet-schutz/" target="_blank"><img src="media/logos/linkedin.svg" alt="linkedin"></a>
         </div>
-    </main>
+        <div class="link">
+            <a class="logo" href="https://www.instagram.com/nyxschutz/" target="_blank"><img src="media/logos/instagram.svg" alt="instagram"></a>
+        </div>
+        <div class="link" id="djsLogo">
+            <a class="logo" href="https://stoolwitch.itch.io" target="_blank"><img src="media/logos/djs.svg" alt="itch"></a>
+        </div>
+    </section>
 </body>
+
+<script>
+
+var today = new Date()
+var curHr = today.getHours()
+var time = null;
+
+if (curHr < 6) {
+    var time = "NUIT";
+}   else if (curHr < 12) {
+    var time = "MATIN";
+}   else if (curHr < 13) {
+    var time = "MIDI";
+}   else if (curHr < 18) {
+    var time = "APRÈS-MIDI";
+}   else if (curHr < 23) {
+    var time = "SOIR";
+}   else {
+    var time = "NUIT";
+}
+
+window.onload = function(e){ 
+    var times = document.querySelectorAll(".time");
+
+    for(var i = 0; i<times.length; i++){
+        times[i].innerHTML = time;
+        console.log(curHr);
+        console.log(time);
+    }
+}
+</script>
 
 </html>

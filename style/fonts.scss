@@ -64,3 +64,61 @@
   font-weight: 900;
   font-style: italic;
 }
+
+// BBB Baskervvol
+
+@font-face {
+  font-family: "BBB Baskervvol";
+  src: url("/media/fonts/bbb-baskervvol/BBBBaskervvol-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "BBB Baskervvol";
+  src: url("/media/fonts/bbb-baskervvol/BBBBaskervvol-Italic.woff2") format("woff2");
+  font-weight: 400;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "BBB Baskervvol";
+  src: url("/media/fonts/bbb-baskervvol/BBBBaskervvol-Book.woff2") format("woff2");
+  font-weight: 450;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "BBB Baskervvol";
+  src: url("/media/fonts/bbb-baskervvol/BBBBaskervvol-BookItalic.woff2") format("woff2");
+  font-weight: 450;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "BBB Baskervvol";
+  src: url("/media/fonts/bbb-baskervvol/BBBBaskervvol-Medium.woff2") format("woff2");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "BBB Baskervvol";
+  src: url("/media/fonts/bbb-baskervvol/BBBBaskervvol-MediumItalic.woff2") format("woff2");
+  font-weight: 500;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "BBB Baskervvol";
+  src: url("/media/fonts/bbb-baskervvol/BBBBaskervvol-Bold.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "BBB Baskervvol";
+  src: url("/media/fonts/bbb-baskervvol/BBBBaskervvol-BoldItalic.woff2") format("woff2");
+  font-weight: 700;
+  font-style: italic;
+}
